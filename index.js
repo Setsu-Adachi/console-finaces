@@ -86,40 +86,44 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-console.log(finances.length)
+console.log(finances.length);
+//The total number of months included in the dataset.
 
-for (let index = 0; index < finances.length; index++) {
-  const element = finances[index];
-  console.log(index,element)
-}
+
+for (var i = 1; i < finances.length; i++) {
+  var netTotal = finances[i];
+  console.log('Net total Profit/Losses', netTotal)
+}//The net total amount of Profit/Losses over the entire period.
 
 
 var average = total / count;
 console.log(average)
+//The average of the changes in Profit/Losses over the entire period.
+
+for (var i = 1; i< finances.length; i++) {
+  var currentAmount = fnance[i][1];
+  var increase = currentAmount - previousAmount;
+  if (increase > greatInc.amount) {
+    greatInc = {date; fiance[i][1], amount; increase };
+  }
+}
+// The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+for (var i = 1; i < finances.length; i++) {
+  var currentAmount = fnance[i][1];
+  var decrease = currentAmount - previousAmount;
+  if (decrease < greatDecre.amount) {
+    greatDecre = {date; fiance[i][1], amount; decrease };
+  }
+}
+
+// The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
 
-// // pseudocode
-
-// // The total number of months included in the dataset.
-// count all the rows of the File = A
-// // The net total amount of Profit/Losses over the entire period.
-// add all the Profit/Losses column = B
-
-// // The average of the changes in Profit/Losses over the entire period.
-// add all the changes from below and devided by the total number of months which is 86
-// // You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-// subsctuct Profit/Losses from the below row = C-1, C-2, C-3 etc 
-// // (Total/(Number of months - 1))
-
-// // The greatest increase in Profit/Losses (date and amount) over the entire period.
-// select the largest number from C-1, C-2, C-3 etc 
-// // The greatest decrease in Profit/Losses (date and amount) over the entire period.
-// select smallerest number from C-1, C-2, C-3 etc
-
-
-// // How do you only print to the nearest 100th in JavaScript?
-// function roundNumber(num) {
-//   return Math.round(num * 100) / 100;
-//  }
-
- 
+console.log('Financial analysis');
+console.log('Total month' {finances.length});
+console.log('Total Profit/Losses' ${total});
+console.log('Avarage Change' ${avarageChange});
+console.log('Greatest Increase' {greatInc.date}, ${greatInc.amount});
+console.log('Greatest Decrease'{greatDecre.date}, ${greatDecre.amount});
+// Your final code should print the analysis to the console.
